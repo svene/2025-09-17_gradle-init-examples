@@ -1,5 +1,21 @@
 = Gradle init examples
 
-== Java, multiproject groovy-dsl
+== Individual project setups
 
-`mkdir java-app-multi-groovydsl && cd "$_" && gradle init --type java-application --dsl groovy --test-framework junit-jupiter --split-project --java-version 21 --use-defaults -- && cd ..`
+=== Java, multiproject groovy-dsl
+
+`cd play && mkdir java-app-multi-groovydsl && cd "$_" && gradle init --type java-application --dsl groovy --test-framework junit-jupiter --split-project --java-version 21 --use-defaults -- && cd .. && cd ..`
+
+=== Groovy, multiproject groovy-dsl
+
+`cd play && mkdir groovy-app-multi-groovydsl && cd "$_" && gradle init --type groovy-application --dsl groovy --test-framework junit-jupiter --split-project --java-version 21 --use-defaults -- && cd .. && cd ..`
+
+== Diff folders with IntelliJ IDEA diff tool
+
+`idea diff gradle_9.0.0/java-app-multi-groovydsl play/java-app-multi-groovydsl`
+
+Diff should be empty if same version of gradle is used.
+
+This can be done with future versions of gradle to see what changed.
+The files can be used to replace gradle-build files of older projects and reapply their specifics.
+This might be a quicker way to upgrade older gradle based projects than trying to find out what needs to be changed in the build files to get it working again using documentation and other tools.
