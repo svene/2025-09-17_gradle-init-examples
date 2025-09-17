@@ -1,0 +1,5 @@
+= Gradle init examples
+
+== Java, multiproject groovy-dsl
+
+`mkdir java-app-multi-groovydsl && cd "$_" && gradle init --type java-application --dsl groovy --test-framework junit-jupiter --split-project --java-version 21 --use-defaults -- && cd ..`
