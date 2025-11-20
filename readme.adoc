@@ -4,15 +4,23 @@
 
 === Java, multiproject groovy-dsl
 
-`cd play && mkdir java-app-multi-groovydsl && cd "$_" && gradle init --type java-application --dsl groovy --test-framework junit-jupiter --split-project --java-version 21 --use-defaults -- && cd .. && cd ..`
+[,shell]
+----
+cd play && mkdir java-app-multi-groovydsl && cd "$_" && gradle init --type java-application --dsl groovy --test-framework junit-jupiter --split-project --java-version 21 --use-defaults -- && cd .. && cd ..
+----
 
 === Groovy, multiproject groovy-dsl
 
-`cd play && mkdir groovy-app-multi-groovydsl && cd "$_" && gradle init --type groovy-application --dsl groovy --test-framework junit-jupiter --split-project --java-version 21 --use-defaults -- && cd .. && cd ..`
-
+[,shell]
+----
+cd play && mkdir groovy-app-multi-groovydsl && cd "$_" && gradle init --type groovy-application --dsl groovy --test-framework junit-jupiter --split-project --java-version 21 --use-defaults -- && cd .. && cd ..
+----
 == Diff folders with IntelliJ IDEA diff tool
 
-`idea diff gradle_9.0.0/java-app-multi-groovydsl play/java-app-multi-groovydsl`
+[,shell]
+----
+idea diff gradle_9.0.0/java-app-multi-groovydsl play/java-app-multi-groovydsl
+----
 
 Diff should be empty if same version of gradle is used.
 
